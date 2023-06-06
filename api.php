@@ -31,9 +31,10 @@ $city = ($data['city']);
 $dob = ($data['dob']);
 $latitude = ($data['latitude']);
 $longitude = ($data['longitude']);
+$photo = $_FILES['data']['name'];
 
-$query = "INSERT INTO `$tablename`(`image`,`name`,`email`,`pass`,`cpass`,`mob`,`gender`,`city`,`dob`,`latitude`,`longitude`) 
-value ('$target_filename',$name','$email','$pass','$cpass','$mob','$gender','$city','$dob','$latitude','$longitude')";
+$query = "INSERT INTO `$tablename` (`image`,`name`,`email`,`pass`,`cpass`,`mob`,`gender`,`city`,`dob`,`latitude`,`longitude`) 
+value ('$photo',$name','$email','$pass','$cpass','$mob','$gender','$city','$dob','$latitude','$longitude')";
 
 $result = mysqli_query($conn,$query);
 
