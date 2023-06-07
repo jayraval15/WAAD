@@ -18,10 +18,13 @@
 <input type="number" name="" placeholder="Enter yor number" required><br>
 <div class="gender">
 <input type="radio" style="height: 20px " name="gander" id="" value="1">Male
-<input type="radio" style="height: 20px;" name="gander" id="" value="2">
-
-Female
+<input type="radio" style="height: 20px;" name="gander" id="" value="2">Female
 </div>
+<input type="text" name="city" id="" required>
+<input type="date" name="dob" id="" required>
+<input type="text" name="latitude" id="" required>
+<input type="text" name="longitude" id="" required>
+
 <button type="submit" name="login">Login</button>
 <br><br><br><br>
 <div  style="-webkit-text-fill-color:aliceblue"> pless enter the new user req <a href="registration_form.php">sig in</a></div>
