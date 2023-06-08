@@ -2,7 +2,7 @@
 include "contion.php";
 
 if(isset($_POST["login"])){
-    
+
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 
@@ -12,14 +12,14 @@ $result = mysqli_query($conn,$query);
 
 $row = mysqli_fetch_assoc($result);
 
-if(mysqli_fetch_row($result)){
+if(mysqli_num_rows($result)){
     $_SESSION['pass'] = $row['pass'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['id'] = $row['id'];
 }else{
     echo "this user not velid";
 }
-
+header("location:home.php");
 }
 
 ?>

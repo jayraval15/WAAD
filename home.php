@@ -11,5 +11,5 @@ echo "hello Mr.".$_SESSION['email'];
 
 <form action="logout.php" method="post">
 
-<button type="submit" value="logout"></button>
+<button type="submit" value="logout">logout</button>
 </form>
