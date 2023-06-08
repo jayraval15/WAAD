@@ -1,4 +1,5 @@
 <?php
+session_start();
 // $hostname = "localhost";
 // $user = "id20676639_insorans_23"; // your servar user name.//
 // $dbpass = "MKL?php1";  // your servar password.//
