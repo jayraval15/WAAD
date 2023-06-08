@@ -6,8 +6,7 @@
 </head>
 <body>
 
-<div class="form_body">
-<img src="avatar1.png">
+<div class="form_body"><br>
 <p class="text">User Login</p>
 
 <form class="login_form">

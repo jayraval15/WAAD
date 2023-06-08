@@ -12,20 +12,18 @@ include "contion.php";
 <body>
 
 <div class="form_body">
+    <br>
 <img src="avatar1.png">
 <p class="text">User Login</p>
 
-<form class="login_form" action="r_f_contion.php" method="post">
+<form class="login_form" action="r_f_contion.php" method="post" enctype="multipart/form-data">
     <input type="file" name="pic" id="">
 <input type="text" name="name" placeholder="Enter yor name" required><br>
 <input type="email" name="email" placeholder="Enter yor email" required><br>
 <input type="password" name="pass" placeholder="Enter yor password" required><br>
 <input type="password" name="cpass" placeholder="Enter yor match password" required><br>
 <input type="number" name="mob" placeholder="Enter yor number" required><br>
-<div class="gender">
-<input type="radio" style="height: 20px" name="gander" id="" value="1" Male>
-<input type="radio" style="height: 20px" name="gander" id="" value="2" Female>
-</div>
+<input type="text" name="gender" id="" placeholder="Enter the gender">
 <input type="text" name="city" placeholder="Enter yor city" id="" required>
 <input type="date" name="dob" id="" required>
 <input type="text" name="latitude" placeholder="Enter yor latitude"  id="" required>
