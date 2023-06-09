@@ -13,11 +13,11 @@ include "contion.php";
 
 <div class="form_body">
     <br>
-<img src="avatar1.png">
+<img src="photo/3135715.png" id="image">
 <p class="text">User Login</p>
 
 <form class="login_form" action="r_f_contion.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="pic" id="">
+    <input type="file" hidden name="pic" id="photo">
 <input type="text" name="name" placeholder="Enter yor name" required><br>
 <input type="email" name="email" placeholder="Enter yor email" required><br>
 <input type="password" name="pass" placeholder="Enter yor password" required><br>
@@ -36,5 +36,25 @@ include "contion.php";
 
 </div>
 
+<script>
+    // const x = document.getElementById('image');
+    // const y = document.getElementById('photo');
+    // x.addEventListener('click',()=>{
+    // y.click();
+    // });
+
+        var image = document.querySelector("photo"),
+        input = document.querySelector("input");
+        input.addEventListener("change", function() {
+    image.src = URL.createObjectURL(input.files[0]);
+        });
+
+        var imageinput = document.getElementById('photo');
+        var image = document.getElementById('image');
+        image.addEventListener("click", ()=>{
+            imageinput.click();
+        } );
+  
+</script>
 </body>
 </html> 
