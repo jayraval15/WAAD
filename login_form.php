@@ -1,9 +1,9 @@
 <?php
-session_start();
 
 if(isset($_POST['name'])){
     header("location:home.php");
 }
+require_once("contion.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,6 @@ if(isset($_POST['name'])){
 
 <div class="form_body"><br>
 <p class="text">User Login</p>
-
 <form class="login_form" action="l_f_contion.php" method="post">
 <input type="text" name="email" placeholder="Enter you email"><br>
 <input type="password" name="pass" placeholder="Password"><br>
