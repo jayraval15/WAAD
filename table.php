@@ -33,7 +33,7 @@ include "contion.php";
             <th scope="col">Actions</th>
           </tr>
                 </thead>
-                <tbody class="t">
+                <tbody>
                 <?php
             $query = "SELECT * FROM `waad-project`" or die("query failed");
             $result = mysqli_query($conn,$query) ;

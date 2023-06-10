@@ -20,8 +20,8 @@ include "contion.php";
     <input type="file" hidden name="pic" id="photo">
 <input type="text" name="name" placeholder="Enter yor name" required><br>
 <input type="email" name="email" placeholder="Enter yor email" required><br>
-<input type="password" name="pass" placeholder="Enter yor password" required><br>
-<input type="password" name="cpass" placeholder="Enter yor match password" required><br>
+<input type="password" name="pass" placeholder="Enter yor password" id="pass"  required><br>
+<input type="password" name="cpass" placeholder="Enter yor match password" id="cpass" required><br>
 <input type="number" name="mob" placeholder="Enter yor number" required><br>
 <input type="text" name="gender" id="" placeholder="Enter the gender">
 <input type="text" name="city" placeholder="Enter yor city" id="" required>
@@ -29,20 +29,26 @@ include "contion.php";
 <input type="text" name="latitude" placeholder="Enter yor latitude"  id="" required>
 <input type="text" name="longitude" placeholder="Enter yor longitude" id="" required>
 
-<button type="submit" name="login">sig in</button>
+<button type="submit" onclick="myfun()" name="login">sig in</button>
 <br><br><br><br>
 <div  style="-webkit-text-fill-color:aliceblue"> pless enter the new user req <a href="login_form.php">log in</a></div>
 </form>
 
 </div>
 
-<script>
-    // const x = document.getElementById('image');
-    // const y = document.getElementById('photo');
-    // x.addEventListener('click',()=>{
-    // y.click();
-    // });
+<script>           
+        function myfun(){
+     var x = document.getElementById("pass").value;
+            var y = document.getElementById("cpass").value;
 
+            if(x == ""){
+               alert('ples enter thr password');
+            }else if(x == y){
+                alert("Logged In");
+            } else {
+                alert("your password not match")
+            }
+        };
         var image = document.querySelector("photo"),
         input = document.querySelector("input");
         input.addEventListener("change", function() {
@@ -54,7 +60,8 @@ include "contion.php";
         image.addEventListener("click", ()=>{
             imageinput.click();
         } );
-  
 </script>
+
+   
 </body>
 </html> 
