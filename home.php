@@ -4,13 +4,13 @@ include "contion.php";
 if(isset($_POST['name'])){
 header("location:login_form.php");
 
-}
-echo "hello Mr.".$_SESSION['email'];
+}?>
 
+<?php
 ?>
 
 <form action="logout.php" method="post">
-    
+<center> 
     <?php
     $id = $_SESSION['id'];
     $query = mysqli_query($conn, "SELECT * FROM `waad-project` where `id` = '$id'");
@@ -23,6 +23,9 @@ if($result['image'] == ""){
     echo '<img src="photo/'.$result["image"].'" style="height: 100px">';
 }
     ?>
+   
+ hello Mr.  <?php echo $_SESSION['email'] ?>
 
 <button type="submit" value="logout">logout</button>
+</center>
 </form>
