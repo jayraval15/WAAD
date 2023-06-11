@@ -8,6 +8,8 @@ include "contion.php";
 <head>
 <title>sig in Form</title>
 <link rel="stylesheet" href="r_style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
 
@@ -20,8 +22,10 @@ include "contion.php";
     <input type="file" hidden name="pic" id="photo">
 <input type="text" name="name" placeholder="Enter yor name" required><br>
 <input type="email" name="email" placeholder="Enter yor email" required><br>
-<input type="password" name="pass" placeholder="Enter yor password" id="pass"  required><br>
-<input type="password" name="cpass" placeholder="Enter yor match password" id="cpass" required><br>
+<div class="eyes">
+<input type="password" name="pass" placeholder="Enter yor password" id="pass"  required><br><i class="bi bi-eye" id="show1"></i>
+<input type="password" name="cpass" placeholder="Enter yor match password" id="cpass" required></br><i class="bi bi-eye" id="show2"></i>
+</div>
 <input type="number" name="mob" placeholder="Enter yor number" required><br>
 <input type="text" name="gender" id="" placeholder="Enter the gender">
 <input type="text" name="city" placeholder="Enter yor city" id="" required>
@@ -36,7 +40,25 @@ include "contion.php";
 
 </div>
 
-<script>           
+<script>  
+ const pass = document.querySelector("pass");
+        const eyes = document.querySelector("show1");
+
+        eyes.addEventListener("click", function(){
+            this.classList.toggle("bi bi-eye");
+            const type = pass.getAttribute("type") === "password" ? "text" : "password"
+  pass.setAttribute("type", type)
+        })
+
+        const pass1 = document.querySelector("Cpass");
+        const eyes1 = document.querySelector("show2");
+
+        eyes.addEventListener("click", function(){
+            this.classList.toggle("bi bi-eye");
+            const type = pass1.getAttribute("type") === "password" ? "text" : "password"
+  pass1.setAttribute("type", type)
+        });
+                 
         function myfun(){
      var x = document.getElementById("pass").value;
             var y = document.getElementById("cpass").value;
@@ -44,7 +66,7 @@ include "contion.php";
             if(x == ""){
                alert('ples enter thr password');
             }else if(x == y){
-                alert("Logged In");
+                alert("your data saved");
             } else {
                 alert("your password not match")
             }
@@ -60,6 +82,9 @@ include "contion.php";
         image.addEventListener("click", ()=>{
             imageinput.click();
         } );
+
+       
+
 </script>
 
    
