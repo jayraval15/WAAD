@@ -10,12 +10,13 @@ include "contion.php";
 <link rel="stylesheet" href="r_style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="form.js">
 </head>
 <body>
 
 <div class="form_body">
     <br>
-<img src="photo/3135715.png" id="image">
+<img src="photo/istockphoto-1300845620-612x612.jpg" id="image">
 <p class="text">User Login</p>
 
 <form class="login_form" action="r_f_contion.php" method="post" enctype="multipart/form-data">
@@ -41,23 +42,7 @@ include "contion.php";
 </div>
 
 <script>  
- const pass = document.querySelector("pass");
-        const eyes = document.querySelector("show1");
 
-        eyes.addEventListener("click", function(){
-            this.classList.toggle("bi bi-eye");
-            const type = pass.getAttribute("type") === "password" ? "text" : "password"
-  pass.setAttribute("type", type)
-        })
-
-        const pass1 = document.querySelector("Cpass");
-        const eyes1 = document.querySelector("show2");
-
-        eyes.addEventListener("click", function(){
-            this.classList.toggle("bi bi-eye");
-            const type = pass1.getAttribute("type") === "password" ? "text" : "password"
-  pass1.setAttribute("type", type)
-        });
                  
         function myfun(){
      var x = document.getElementById("pass").value;

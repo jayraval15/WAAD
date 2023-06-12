@@ -9,10 +9,10 @@ body,
   background: #cd9cf2;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to top, rgb(159, 242, 156), rgb(206, 9, 25));
+  background: -webkit-linear-gradient(to top, rgb(238, 134, 102), rgb(199, 71, 81));
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to top, rgb(230, 151, 5), rgb(62, 5, 231))
+  background: linear-gradient(to top, rgb(224, 171, 72), rgb(85, 230, 97))
 }
 
 table td,
