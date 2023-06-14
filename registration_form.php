@@ -23,16 +23,14 @@ include "contion.php";
     <input type="file" hidden name="pic" id="photo">
 <input type="text" name="name" placeholder="Enter yor name" required><br>
 <input type="email" name="email" placeholder="Enter yor email" required><br>
-<div class="eyes">
-<input type="password" name="pass" placeholder="Enter yor password" id="pass"  required><br><i class="bi bi-eye" id="show1"></i>
-<input type="password" name="cpass" placeholder="Enter yor match password" id="cpass" required></br><i class="bi bi-eye" id="show2"></i>
-</div>
+<input type="password" name="pass" placeholder="Enter yor password" id="pass"  required><br>
+<input type="password" name="cpass" placeholder="Enter yor match password" id="cpass" required></br>
 <input type="number" name="mob" placeholder="Enter yor number" required><br>
-<input type="text" name="gender" id="" placeholder="Enter the gender">
-<input type="text" name="city" placeholder="Enter yor city" id="" required>
-<input type="date" name="dob" id="" required>
-<input type="text" name="latitude" placeholder="Enter yor latitude"  id="" required>
-<input type="text" name="longitude" placeholder="Enter yor longitude" id="" required>
+<input type="text" name="gender" id="" placeholder="Enter the gender" required><br>
+<input type="text" name="city" placeholder="Enter yor city" id="" required><br>
+<input type="date" name="dob" id="" required><br>
+<input type="text" name="latitude" placeholder="Enter yor latitude"  id="" required><br>
+<input type="text" name="longitude" placeholder="Enter yor longitude" id="" required><br>
 
 <button type="submit" onclick="myfun()" name="login">sig in</button>
 <br><br><br><br>
@@ -53,7 +51,8 @@ include "contion.php";
             }else if(x == y){
                 alert("your data saved");
             } else {
-                alert("your password not match")
+                alert("your password not match");
+
             }
         };
         var image = document.querySelector("photo"),
