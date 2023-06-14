@@ -97,3 +97,9 @@ background: linear-gradient(#34495e, #2c3e50);
     margin-top: 30px;
     color: aliceblue;
     }
+    .eye{
+        position: absolute;
+    }
+#hide{
+        display: none;
+    }

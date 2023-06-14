@@ -23,8 +23,16 @@ include "contion.php";
     <input type="file" hidden name="pic" id="photo">
 <input type="text" name="name" placeholder="Enter yor name" required><br>
 <input type="email" name="email" placeholder="Enter yor email" required><br>
-<input type="password" name="pass" placeholder="Enter yor password" id="pass"  required><br>
-<input type="password" name="cpass" placeholder="Enter yor match password" id="cpass" required></br>
+<input type="password" name="pass" placeholder="Enter yor password" id="pass"  required>
+<span class="eye" onclick="myfuntion()"> 
+<i class="bi bi-eye" id="hide"></i>
+<i class="bi bi-eye-slash" hidden id="hide1"></i>
+</span>
+<input type="password" name="cpass" placeholder="Enter yor match password" id="cpass" required>
+<span class="eye" onclick="myfunt()()"> 
+<i class="bi bi-eye" id="hide3"></i>
+<i class="bi bi-eye-slash" hidden id="hide4"></i>
+</span>
 <input type="number" name="mob" placeholder="Enter yor number" required><br>
 <input type="text" name="gender" id="" placeholder="Enter the gender" required><br>
 <input type="text" name="city" placeholder="Enter yor city" id="" required><br>
@@ -41,20 +49,40 @@ include "contion.php";
 
 <script>  
 
-                 
-        function myfun(){
-     var x = document.getElementById("pass").value;
-            var y = document.getElementById("cpass").value;
+    function myfuntion(){
+        var x =document.getElementById('pass');
+        var y =document.getElementById('hide');
+        var z =document.getElementById('hide1 ');
 
-            if(x == ""){
-               alert('ples enter thr password');
-            }else if(x == y){
-                alert("your data saved");
-            } else {
-                alert("your password not match");
+        if(x.type === 'password'){
+            x.type = 'text';
+            y.style.display = "block";
+            z.style.display = "none";
+        }else{
+            x.type = 'password';
+            y.style.display = "block";
+            z.style.display = "none";
+        }
+    };
+    function myfunt(){
+        var x =document.getElementById('cpass');
+        var y =document.getElementById('hide3');
+        var z =document.getElementById('hide4 ');
 
-            }
-        };
+        if(x.type === 'password'){
+            x.type = 'text';
+            y.style.display = "block";
+            z.style.display = "none";
+        }else{
+            x.type = 'password';
+            y.style.display = "block";
+            z.style.display = "none";
+        }
+    };
+
+
+
+
         var image = document.querySelector("photo"),
         input = document.querySelector("input");
         input.addEventListener("change", function() {
