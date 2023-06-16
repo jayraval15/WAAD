@@ -29,7 +29,7 @@ include "contion.php";
 <i class="bi bi-eye-slash" hidden id="hide1"></i>
 </span>
 <input type="password" name="cpass" placeholder="Enter yor match password" id="cpass" required>
-<span class="eye" onclick="myfunt()()"> 
+<span class="eye" onclick="myfunt()"> 
 <i class="bi bi-eye" id="hide3"></i>
 <i class="bi bi-eye-slash" hidden id="hide4"></i>
 </span>
@@ -40,7 +40,7 @@ include "contion.php";
 <input type="text" name="latitude" placeholder="Enter yor latitude"  id="" required><br>
 <input type="text" name="longitude" placeholder="Enter yor longitude" id="" required><br>
 
-<button type="submit" onclick="myfun()" name="login">sig in</button>
+<button type="submit" onclick="worngpas()" name="login">sig in</button>
 <br><br><br><br>
 <div  style="-webkit-text-fill-color:aliceblue"> pless enter the new user req <a href="login_form.php">log in</a></div>
 </form>
@@ -80,6 +80,7 @@ include "contion.php";
         }
     };
 
+        // THIS SCRIPT FOR EYES.
 
 
 
@@ -95,7 +96,7 @@ include "contion.php";
             imageinput.click();
         } );
 
-       
+       // THIS SCRIPT IS IMAGE.
 
 </script>
 
